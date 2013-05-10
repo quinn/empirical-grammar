@@ -1,0 +1,37 @@
+[33mcommit e4d52031d9d810f8c68be403091bd543e0b7422d[m
+Author: SS <git@push.com>
+Date:   Fri May 10 17:28:54 2013 -0400
+
+    views
+
+[33mcommit cae2dd9c54433fa88ab8d1e951950d8f160450f9[m
+Author: Vitaliy Bykovec <vbykovec@gmail.com>
+Date:   Sat May 4 17:00:10 2013 +0300
+
+    fix bug in css -;
+
+[33mcommit f70b25e73df6c9ef86b6a2ce15595d74140947f0[m
+Author: Vitaliy Bykovec <vbykovec@gmail.com>
+Date:   Sat May 4 16:55:44 2013 +0300
+
+    fix assets for index design
+
+[33mcommit 8b00c5ad821c4366d68efa4cee9915ef0968a2a7[m
+Author: Vitaliy Bykovec <vbykovec@gmail.com>
+Date:   Sat May 4 16:39:04 2013 +0300
+
+    design only for main page
+
+[33mcommit 8f6546939a8998921893cbd149f99260f322fc77[m
+Author: Vitaliy Bykovec <vbykovec@gmail.com>
+Date:   Sat May 4 14:20:06 2013 +0300
+
+    change offset for logo
+
+[33mcommit 607175f2fa532bbbfef6641f888a5953b0c3b474[m
+Author: Vitaliy Bykovec <vbykovec@gmail.com>
+Date:   Sat May 4 13:08:56 2013 +0300
+
+    try add bad new design
+
+[33mcommit 91973a98877323cca06659dd35f239278986

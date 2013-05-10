@@ -1,0 +1,150 @@
+/* Author : eGrammar */
+html,
+body { height: 100%; font-family: 'proxima_nova_rgregular'; font-size: 100%; }
+
+header { height: 70px; background: #252626; border-bottom: 1px solid #67942e; }
+
+/* The Header */
+#logo { text-indent: -999em; margin: 15px 0; }
+#logo a { width: 232px; height: 35px; background:url('../images/logo.jpg') no-repeat; display: block; }
+
+#main-menu  { float: left; }
+#main-menu { font-size: 16px; font-family: 'Museo500'; padding-top: 25px; }
+#main-menu ul { display: block; }
+#main-menu li { margin: 0 20px; display: inline; }
+#main-menu a { color: #f1f1f1; text-decoration: none; }
+
+#main-login { float: right; padding-top: 20px; }
+#main-login { font-family: 'proxima_novasemibold'; font-size: 12px; }
+#main-login ul {}
+#main-login li { float: left; }
+#main-login a { display: block; color: #898989; height: 21px; line-height: 21px; padding: 0 10px; background: #3b3b3b; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; behavior: url(js/PIE.htc); position: relative; text-decoration: none; margin: 0 5px; }
+
+/* Wrapper */
+#wrap-middle { background: #83ba3b url('middle-bg.jpg'); border-bottom: 1px solid #759b23; }
+
+ #wrap-middle-left { padding-top: 50px; }
+ #wrap-middle-left  h2,
+ #wrap-middle-left p { font-family: 'Museo500'; color: #f1f1f1; margin-bottom: 35px;  }
+ #wrap-middle-left  h2 { font-size: 44px; line-height: 60px; }
+ #wrap-middle-left p { font-size: 18px; line-height: 26px; }
+ .btn-sample-01 { font-family: 'proxima_nova_rgbold'; }
+ .btn-sample-01 li { float: left; display: inline; }
+ .btn-sample-01 a { display: block; width: 194px; height: 57px; line-height: 57px; background: #f6d600 url('../images/grad-01.jpg'); color: #a57454; text-align: center; margin: 0 6px; text-decoration: none; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: #666 0px 1px 2px; -moz-box-shadow: #666 0px 1px 2px; box-shadow: #666 0px 1px 2px; behavior: url(js/PIE.htc); position: relative; }
+ 
+ /* #wrap-middle-right { height: 408px; } */
+ #wrap-middle-right h2 { color: #74ac2c; font-size: 24px; margin: 0 0 10px; padding-top: 25px; }
+ #wrap-middle-right p.semiitalic { font-style: italic; color: #717171; }
+ #wrap-middle-right-inner { background: #ffffff; margin-left: 20px;  -webkit-border-radius: 0 0 5px 5px; -moz-border-radius: 0 0 5px 5px; border-radius: 0 0 5px 5px; -webkit-box-shadow: #666 0px 1px 2px; -moz-box-shadow: #666 0px 1px 2px; box-shadow: #666 0px 1px 2px; behavior: url(js/PIE.htc); position: relative; }
+ .first-cut { text-align: center;  font-family: 'proxima_nova_rgbold';  }
+ .second-cut { text-align: center; line-height: 38px; background: #aa6e68; color: #ece8dd; font-size: 14px; font-family: 'proxima_novasemibold'; }
+ .third-cut { background: #ece8dd; padding: 20px 0 0; border-bottom: 1px solid #dad0c0; font-family: helvetica; color: #5b5b5b; font-size: 15px; line-height: 28px; }
+ .third-cut p { padding: 0 40px; }
+ .fourth-cut { border-top: 2px solid #ebebeb; }
+ .fourth-cut button { width: 140px; line-height: 40px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background: #aa6e68; color: #fff; font-size: 14px; font-family: 'proxima_nova_rgbold'; border: none; cursor: pointer; margin: 20px; behavior: url(js/PIE.htc); position: relative; }
+ 
+#wrap-features { background: #fff; border-top: 1px solid #dadada; }
+ 
+ #wrap-features-inner { padding-top: 67px; }
+ #wrap-features-inner article { text-align: center; }
+ #wrap-features-inner .featured-content { width: 220px; margin: auto; padding-top: 40px; }
+ #wrap-features-inner .featured-content  h2 { color: #232323; font-family: 'Museo500'; font-size: 30px; line-height: 36px; margin-bottom: 35px; }
+ #wrap-features-inner .featured-content p { color: #838383; line-height: 24px; font-size: 17px; }
+ 
+#wrap-testimonials { background: #ece8dd; }
+
+ #wrap-testimonials-inner { padding-top: 52px; margin-left: 10px; padding-bottom: 52px;}
+ #wrap-testimonials-inner  #what  h2 { color: #aa6e68; font-size:28px; font-family: 'Museo500'; line-height: 120px; }
+ #wrap-testimonials-inner  #testimessage { background: #aa6e68; margin: 0 0 0 0; padding: 0px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; font-family: 'proxima_novaregular_italic'; color: #ece8dd; font-size: 17px; line-height: 26px; }
+ .author { font-size: 18px; color: #fff; font-family: 'proxima_novasemibold'; margin-top: 10px; display: block; }
+
+
+/* Footer */
+
+footer { background: #252626; }
+ #footer-inner { font-size: 14px; color: #7c7c7c; }
+ #footer-item ,
+ #copyright { padding-top: 65px; }
+ #footer-item {}
+ #footer-item ul { text-align: right; }
+ #footer-item li { display: inline; }
+ #footer-item a { color: #c8c8c8; text-decoration: none; margin-left: 18px; }
+
+/* Others */
+.txtwrong{color: #aa6e68; font-weight: bold;}
+.txtcorrect{color: #008000; font-weight: bold;}
+section {
+  display: block;
+}
+
+/* Special Fonts */
+
+@font-face {
+    font-family: 'Museo500';
+    src: url('../fonts/museo500-regular-webfont.eot');
+    src: url('../fonts/museo500-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo500-regular-webfont.woff') format('woff'),
+         url('../fonts/museo500-regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo500-regular-webfont.svg#Museo500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('../fonts/proximanova-bold-webfont.eot');
+    src: url('../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-bold-webfont.woff') format('woff'),
+         url('../fonts/proximanova-bold-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('../fonts/proximanova-regular-webfont.eot');
+    src: url('../fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-regular-webfont.woff') format('woff'),
+         url('../fonts/proximanova-regular-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'proxima_novasemibold';
+    src: url('../fonts/proximanova-semibold-webfont.eot');
+    src: url('../fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-semibold-webfont.woff') format('woff'),
+         url('../fonts/proximanova-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'proxima_novaregular_italic';
+    src: url('../fonts/proximanova-regularitalic-webfont.eot');
+    src: url('../fonts/proximanova-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-regularitalic-webfont.woff') format('woff'),
+         url('../fonts/proximanova-regularitalic-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-regularitalic-webfont.svg#proxima_novaregular_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

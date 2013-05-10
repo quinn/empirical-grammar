@@ -1,0 +1,121 @@
+.grammar-test {
+  .text, .results, .lessons {
+    border: 1px solid #555;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+
+  .text .chunks {
+    line-height: 1.6;
+    font-size: 18px;
+  }
+
+  .results, .lessons {
+    display: none;
+  }
+
+  .show-results {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .edit-word, .graded-word, .lesson-word {
+    display: inline-block;
+    outline: none;
+    &:focus { background-color: #eee }
+  }
+
+  .graded-word.error, .lesson.error .error {
+    color: $red;
+    font-weight: bold;
+  }
+
+  .graded-word.correct {
+    color: $green;
+    font-weight: bold;
+  }
+
+  .progress {
+    display: table;
+    width: 100%;
+    border-left: 1px solid #555;
+    margin-bottom: 20px;
+
+    .unit {
+      display: table-cell;
+      height: 30px;
+      border: 1px solid #555;
+      border-left-width: 0;
+      background-color:#FFF;
+    }
+
+    .correct {
+      background-color: $green;
+    }
+  }
+
+  .lessons {
+    h4 {
+      margin-top: 2em;
+    }
+
+    .chunks {
+      border: 1px dashed #aaa;
+      padding: 10px;
+      margin-bottom: 1em;
+    }
+
+    p.label {
+      margin-bottom: 5px;
+    }
+
+    textarea {
+      @include box-sizing(border-box);
+      width: 100%;
+    }
+
+    .lesson {
+      padding-bottom: 2em;
+      border-bottom: 1px solid #aaa;
+      margin-bottom: 2em;
+      .error, .success { display: none }
+
+      &.error {
+        .error { display: block }
+
+        .input {
+          border: 2px solid $red;
+        }
+      }
+
+      &.success {
+        .success {
+          display: block;
+          color: $green;
+        }
+
+        .form { display: none }
+      }
+    }
+  }
+}
+
+.grammar-test-header, .about-page {
+  //border: 1px solid #555;
+  margin-bottom: 20px;
+  position:relative;
+}
+
+.grammar-test-header .embed {
+  position: absolute;
+  width: 100%;
+  text-align:center;
+  top: 216px;
+
+  .inner {
+    width: 420px;
+    height: 31px;
+    display:inline-block;
+  }
+}

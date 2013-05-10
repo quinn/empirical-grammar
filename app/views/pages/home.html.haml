@@ -1,0 +1,166 @@
+!!!
+%html{:lang => "en-US"}
+  %head
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "IE=EmulateIE8", "http-equiv" => "X-UA-Compatible"}/
+    %title E-grammar
+    = javascript_include_tag "html5.js"
+    = javascript_include_tag "h5utils.js"
+    = javascript_include_tag "ie-late.js"
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+    = stylesheet_link_tag "reset"
+    = stylesheet_link_tag "grid"
+    = stylesheet_link_tag "style"
+  %body
+    / The Header
+    %header
+      .container_16.clearfix
+        .grid_5
+          %h1#logo
+            %a{:href => "/", :title => "Empirical Grammar"} Empirical Grammar
+        .grid_11.clearfix
+          %nav#main-menu
+            %ul
+              %li= link_to 'For Teachers', teachers_path
+              %li= link_to 'For Students', middle_school_path
+              %li= link_to 'For Educators', middle_school_path
+          %nav#main-login
+            %ul
+              - if signed_in?
+                %li= link_to 'Profile', profile_path, class: 'alpha'
+                %li= link_to 'Sign out', session_path, method: :delete, class: 'omega'
+              - else
+                %li= link_to 'Sign Up', new_session_path, class: 'alpha'
+                %li= link_to 'Create Account', new_account_path, class: 'omega'
+    / The Wrapper
+    #wrap
+      / The Content Middle
+      %section#wrap-middle
+        #wrap-middle-inner.container_16.clearfix
+          #wrap-middle-left.grid_7
+            %h2 A Fun, Free Way To Learn Grammar Interactively.
+            %p Empirical Grammar provides personalized grammar lessons for middle school students.
+            %ul.btn-sample-01
+              %li= link_to 'Students', middle_school_path, class: 'alpha'
+              %li= link_to 'Teachers', teachers_path, class: 'omega'
+          #wrap-middle-right.grid_9
+            #wrap-middle-right-inner
+              .first-cut
+                %h2 There are 5 errors in this paragraph.
+                %p.semiitalic Can you correct them all?
+              .second-cut
+                %small To edit, simply type into the text box.
+              .third-cut
+                %p#editable{:contenteditable => "true"} In 1914 Earnest Shackleton set of on the Imperial Trans-Antarctic Expedition. His goal was to cross the Antarctic via the South Pole. In 1915 'Endurance' became trapped in the ice, and it's crew was stuck. Ten months later there ship sunk, and Shackletons crew was living on icebergs. In april 1916 they set off in three small boats, eventually reaching Elephant Island.
+              .fourth-cut
+                %button{:onclick => "change_txt();"} Submit
+      / The Content Middle
+      / The Content Features
+      %section#wrap-features
+        #wrap-features-inner.container_16.clearfix
+          %article.grid_5
+            %figure
+              =image_tag "ico-interactive.jpg"
+            .featured-content
+              %h2 Interactive Assessments
+              %p Proofread short passages to correct errors in punctuation, spelling and other rules of English writing - and then get immediate feedback!
+          %article.grid_6
+            %figure
+              =image_tag "ico-personal.jpg"
+            .featured-content
+              %h2 Personalized Lessons
+              %p Get customized lessons to help you practice the skills you need to improve.
+          %article.grid_5
+            %figure
+              =image_tag "ico-evaluate.jpg"
+            .featured-content
+              %h2 Progress Evaluations
+              %p Evaluate your progress - and teachers, you can evaluate the progress of your students based on homework you assign.
+      / The Content Features
+      / The Content Testimonials
+      %section#wrap-testimonials
+        #wrap-testimonials-inner.container_16.clearfix
+          #what.grid_5
+            %h2 What They're Saying
+          .grid_11
+            #testimessage
+              %p "This looks ideal for students of all ages! I am excited to have the opportunity to give my college writing students the chance to practice the basic rules of English writing with these fun-to-read texts. If anything can save us from the coming apostrophe-apocalypse, it is E-Grammar!"
+              %span.author Laura Gibbs PhD, Professor at the University of Oklahoma.
+      / The Content Testimonials
+    / The Wrapper
+    / The Footer
+    %footer
+      #footer-inner.container_16.clearfix
+        #copyright.grid_4
+          %span &copy 2013. All Rights Reserved.
+        #footer-item.grid_12
+          %ul
+            %li
+              %a{:href => "/", :title => "Home"} Home
+
+            %li= link_to 'About', about_path
+            %li= link_to 'Teachers', teachers_path
+            %li= link_to 'Students', middle_school_path
+            %li
+              %a{:href => "#", :title => "Contact"} Contact
+            %li= link_to 'Educators', middle_school_path
+            %li= link_to 'Sign Up', new_session_path
+    / The Footer
+    :javascript
+      function change_txt(){
+      	 
+      	//var replaced = "In 1914 Earnest Shackleton set <span class='txtspecial'>of</span> on the Imperial Trans-Antarctic Expedition. His goal was to cross the Antarctic via the South Pole.  In 1915 'Endurance' became trapped in the ice, and <span class='txtspecial'>it's</span> crew was stuck.  Ten months later <span class='txtspecial'>there</span> ship sunk, and <span class='txtspecial'>Shackletons</span> crew was living on icebergs. In <span class='txtspecial'>april</span> 1916 they set off in three small boats eventually reaching Elephant Island.";
+      	
+      	var str = $('#editable').html();
+      	var strArray = str.split('.');
+      	var retArray = [];
+      
+      	if(strArray[0] == "In 1914 Earnest Shackleton set off on the Imperial Trans-Antarctic Expedition"){
+      		retArray.push("In 1914 Earnest Shackleton set <span class='txtcorrect'>off</span> on the Imperial Trans-Antarctic Expedition");
+      	}
+      	else{
+      		
+      		retArray.push("In 1914 Earnest Shackleton set <span class='txtwrong'>of</span> on the Imperial Trans-Antarctic Expedition");
+      	}
+      	
+      	retArray.push("His goal was to cross the Antarctic via the South Pole");
+      	
+      	if(strArray[2] == " In 1915 'Endurance' became trapped in the ice, and its crew was stuck"){
+      		retArray.push("In 1915 'Endurance' became trapped in the ice, and <span class='txtcorrect'>its</span> crew was stuck");
+      	}
+      	else{
+      		
+      		retArray.push("In 1915 'Endurance' became trapped in the ice, and <span class='txtwrong'>it's</span> crew was stuck");
+      	}
+      	
+      	if(strArray[3] == " Ten months later their ship sunk, and Shackleton's crew was living on icebergs"){
+      		retArray.push("Ten months later <span class='txtcorrect'>their</span> ship sunk, and <span class='txtcorrect'>Shackleton's</span> crew was living on icebergs");
+      	}
+      	else if(strArray[3] == " Ten months later their ship sunk, and Shackletons crew was living on icebergs"){
+      		
+      		retArray.push("Ten months later <span class='txtcorrect'>their</span> ship sunk, and <span class='txtwrong'>Shackletons</span> crew was living on icebergs");
+      		
+      	}
+      	else if(strArray[3] == " Ten months later there ship sunk, and Shackleton's crew was living on icebergs"){
+      		
+      		retArray.push("Ten months later <span class='txtwrong'>there</span> ship sunk, and <span class='txtcorrect'>Shackleton's</span> crew was living on icebergs");
+      		
+      	}
+      	else{
+      		
+      		retArray.push("Ten months later <span class='txtwrong'>there</span> ship sunk, and <span class='txtwrong'>Shackletons</span> crew was living on icebergs");
+      	}
+      	
+      	if(strArray[4] == " In April 1916 they set off in three small boats, eventually reaching Elephant Island"){
+      		retArray.push("In <span class='txtcorrect'>April</span> 1916 they set off in three small boats, eventually reaching Elephant Island.");
+      	}
+      	else{
+      		
+      		retArray.push("In <span class='txtwrong'>april</span> 1916 they set off in three small boats, eventually reaching Elephant Island.");
+      	}
+      	
+      	var ret = retArray.join('. ');
+      	
+      	$('#editable').html(ret);
+      	$('[contenteditable]').removeAttr('contenteditable');
+      }

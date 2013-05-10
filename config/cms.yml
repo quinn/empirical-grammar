@@ -1,0 +1,19 @@
+content_types:
+  FileUpload:
+    attributes:
+      name: string
+      file: file
+      description: text
+  PageArea:
+    attributes:
+      name: string
+      description: string
+      content: html
+  GrammarTest:
+    attributes:
+      text: text
+  GrammarRule:
+    attributes:
+      identifier: string
+      description: text
+      practice_lesson: text

@@ -1,0 +1,150 @@
+/*
+ *= require annotator.min
+ *= require_self
+ */
+
+@import 'bootstrap_imports';
+@import 'compass/typography/text/replacement';
+
+@mixin fix-height($height) {
+  height: $height;
+  line-height: $height;
+}
+
+@mixin nav-height {
+  @include fix-height(45px);
+}
+html,body{
+  height: 100%;
+  }
+body {
+  font-family: 'proxima_nova_rgregular';
+  //padding-top: 100px
+  #wrap-content{
+     min-height: 100%;
+     height: auto !important;
+     height: 100%;
+     margin: 0 auto -72px;
+    }
+}
+
+
+.simple-rounded-box {
+  @include border-radius(15px);
+  padding: 20px;
+  background-color: #fff;
+}
+
+@import 'header';
+@import 'pages';
+@import 'home';
+@import 'grammar_test';
+
+textarea {
+  height: 100px;
+}
+
+
+@font-face {
+    font-family: 'Museo500';
+    src: url('fonts/museo500-regular-webfont.eot');
+    src: url('fonts/museo500-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo500-regular-webfont.woff') format('woff'),
+         url('fonts/museo500-regular-webfont.ttf') format('truetype'),
+         url('fonts/museo500-regular-webfont.svg#Museo500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('fonts/proximanova-bold-webfont.eot');
+    src: url('fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-bold-webfont.woff') format('woff'),
+         url('fonts/proximanova-bold-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('fonts/proximanova-regular-webfont.eot');
+    src: url('fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-regular-webfont.woff') format('woff'),
+         url('fonts/proximanova-regular-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'proxima_novasemibold';
+    src: url('fonts/proximanova-semibold-webfont.eot');
+    src: url('fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-semibold-webfont.woff') format('woff'),
+         url('fonts/proximanova-semibold-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'proxima_novaregular_italic';
+    src: url('fonts/proximanova-regularitalic-webfont.eot');
+    src: url('fonts/proximanova-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova-regularitalic-webfont.woff') format('woff'),
+         url('fonts/proximanova-regularitalic-webfont.ttf') format('truetype'),
+         url('fonts/proximanova-regularitalic-webfont.svg#proxima_novaregular_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.brand { 
+  padding: 17px 120px 17px !important; 
+  .span {
+    height: 35px;
+    width: 232px; 
+    text-indent: -999em;
+    background: url('logo.jpg') no-repeat; display: inline-block; 
+  }
+}
+
+#main-login { 
+  float: right; 
+  padding-top: 20px; 
+  padding-right: 200px;
+  font-family: 'proxima_novasemibold'; 
+  font-size: 12px; 
+  li { float: left; }
+  a { display: block; color: #898989; height: 21px; line-height: 21px; padding: 0 10px; background: #3b3b3b; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; behavior: url(js/PIE.htc); position: relative; text-decoration: none; margin: 0 5px; }
+}
+
+.navbar.navbar-bottom {
+   margin-bottom: 0px;
+}
+
+#push-futer {
+  height: 72px;
+}
+
+
+/*#@import 'reset';
+@import 'grid';
+*/
+@import 'style1';
